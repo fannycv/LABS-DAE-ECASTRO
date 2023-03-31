@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario-Cilindro</title>
+    <style>
+      .forml {
+        margin-left: 80px;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="forml">
+      <h2>{{ titulo }}</h2>
+      <form action="{% url 'cilindro:calcular' %}" method="post">
+        {% csrf_token %}
+
+        <label for="diametro"
+          ><b>Introduzca el diámetro en metros</b> <small>(3.12):</small>
+        </label>
+        <input
+          type="number"
+          step="any"
+          id="diametro"
+          name="diametro"
+          required
+        /><br /><br />
+        <label for="altura"
+          ><b>Introduza la altura en metros</b> <small>(2.24):</small>
+        </label>
+        <input
+          type="number"
+          step="any"
+          id="altura"
+          name="altura"
+          required
+        /><br /><br />
+        <input type="submit" value="Calcular" />
+      </form>
+    </div>
+  </body>
+</html>
