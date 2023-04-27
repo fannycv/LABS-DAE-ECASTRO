@@ -1,0 +1,16 @@
+{% extends "layout.html" %} {% block content %}
+<div class="card text-center m-5">
+  <div class="card-header" style="background-color: lightblue">
+    Categoria: {{producto.categoria.nombre}}
+  </div>
+  <div class="card-body">
+    <h1>{{producto.nombre}}</h1>
+    <p class="card-text text-darkr" style="font-weight: bold">
+      S/ {{producto.precio}}
+    </p>
+    <p class="">Stock: {{producto.stock}}</p>
+    <a href="#" class="btn btn-outline-dark col-5">Add to cart</a>
+  </div>
+</div>
+
+{% endblock %}
